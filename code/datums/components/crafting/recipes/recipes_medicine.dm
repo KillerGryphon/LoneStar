@@ -47,15 +47,23 @@
 	time = 35
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/healpowder5
+	name = "Batch of healing powders (x5)"
+	result = /obj/item/storage/box/medicine/powder5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 15,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 15)
+	time = 60
+	category = CAT_MEDICAL
+
 /datum/crafting_recipe/bitterdrink
-	name = "Bottle Bitterdrink"
+	name = "Bottle bitterdrink"
 	result = /obj/item/reagent_containers/pill/patch/bitterdrink
 	reqs = list(/datum/reagent/medicine/bitter_drink = 30)
 	time = 20
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/bitterdrink5
-	name = "Bottle Bitterdrink (x5)"
+	name = "Batch of bitterdrink (x5)"
 	result = /obj/item/storage/box/medicine/bitterdrink5
 	reqs = list(/datum/reagent/medicine/bitter_drink = 150)
 	time = 60
@@ -72,19 +80,20 @@
 	time = 45
 	category = CAT_MEDICAL
 
-/*/datum/crafting_recipe/berserkerpowder
-	name = "Berserker Powder"
-	result = /obj/item/reagent_containers/pill/patch/healingpowder/berserker
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 3,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 3,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 3,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 3)
-	time = 45
+/datum/crafting_recipe/healpoultice5
+	name = "Batch of healing poultice (x5)"
+	result = /obj/item/storage/box/medicine/poultice5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 10,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 10,
+				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 10)
+	time = 60
 	category = CAT_MEDICAL
-*/
+
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
-	result = /obj/item/smelling_salts/crafted
+	result = /obj/item/smelling_salts
 	reqs = list(/datum/reagent/ammonia = 10,                                 //Ammonia forces a intake of respiratory breath reflex, which is the foundation of all good smelling salts.
 				/obj/item/reagent_containers/food/snacks/onion_slice = 4,    //Sliced onions, 2 total split into 4 slices.
 				/obj/item/reagent_containers/food/snacks/grown/garlic = 2,   //Pungent garlic.
@@ -107,7 +116,7 @@
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
 	reqs = list(/datum/reagent/medicine/stimpak = 10,
 				/obj/item/reagent_containers/syringe = 1)
-	time = 1 //you're just filling a hypospray with stim fluid... 
+	time = 1 //you're just filling a hypospray with stim fluid...
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/stimpak5
@@ -115,12 +124,12 @@
 	result = /obj/item/storage/box/medicine/stimpaks/stimpaks5
 	reqs = list(/datum/reagent/medicine/stimpak = 50,
 				/obj/item/reagent_containers/syringe = 5)
-	time = 5 //you're just filling 5 hypospray with stim fluid... 
+	time = 5 //you're just filling 5 hypospray with stim fluid...
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/improvisedstimpak5
 	name = "Imitation Stimpak (x5)"
-	result = /obj/item/storage/box/medicine/stimpaks/stimpaks5/imitation
+	result = /obj/item/storage/box/medicine/stimpaks/imitation_stimpaks5
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 20,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 20,
 				/obj/item/reagent_containers/syringe = 5)
@@ -172,7 +181,7 @@
 	time = 35
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/turbo
 	name = "Turbo"
@@ -183,7 +192,7 @@
 	time = 35
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/psycho
 	name = "Psycho"
@@ -194,7 +203,7 @@
 	time = 35
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/medx
 	name = "Med-X"
@@ -208,7 +217,7 @@
 	time = 35
 	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_MEDICAL
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/buffout
 	name = "Buffout"
@@ -221,7 +230,7 @@
 	time = 50
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/extract_gaia
 	name = "Extract gaia"
